@@ -86,16 +86,13 @@ const Main = () => {
                 <a className="nav-link" href="#services">Преимущества</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link" href="#about">Сертификат</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#projects">Projects</a>
+                <a className="nav-link" href="#projects">Хиты</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#testimonial">Testimonial</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#plans">Plans</a>
+                <a className="nav-link" href="#testimonial">Комментарии</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link btn btn-success" href="#contact">✆ Тех. поддержка</a>
