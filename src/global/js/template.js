@@ -77,7 +77,7 @@
 		});
 
 		// counter Satisfied clients
-		var maxScVal = 97;
+		var maxScVal = 100;
 		var isc = parseInt($('.scVal').text());
 		var tim;
 		function run() {

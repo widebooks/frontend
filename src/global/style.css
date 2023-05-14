@@ -18073,7 +18073,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 .form-control, .form-control:focus {
@@ -19019,3 +19019,23 @@ section {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+
+/*КАСТОМНЫЕ СТИЛИ*/
+
+.owl-carousel-projects div {
+
+}
+
+.owl-stage {
+  height: 400px;
+}
+
+.owl-stage div{
+  height: 100%;
+}
+
+.owl-stage img{
+  height: 100%;
+  object-fit: contain;
+}

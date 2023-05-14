@@ -2,7 +2,7 @@
 /* @group Flipster Essential Styles */
 .flipster {
   display: block;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   overflow-y: visible;
   position: relative;
 }
