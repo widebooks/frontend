@@ -1,3 +1,3 @@
-import Main from "./Main"
+import MainContainerMock from "./MainContainerMock"
 
-export default Main;
+export default MainContainerMock;

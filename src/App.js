@@ -1,10 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
 import Main from "./landing/Main";
+import MiniSearch from "components/MiniSearch";
 
 function App() {
   return (
       <Routes>
+        {/*Для разработки роут*/}
+        <Route path="/test" element={ <MiniSearch /> } />
+
         {/*Lending*/}
         <Route path="/" element={ <Main /> } />
         {/*App*/}

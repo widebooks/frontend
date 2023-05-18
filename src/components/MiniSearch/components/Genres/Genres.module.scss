@@ -1,0 +1,16 @@
+
+.genres {
+  font-family: Roboto, sans-serif;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 15px;
+  }
+
+  &__chips {
+    display: flex;
+
+  }
+}

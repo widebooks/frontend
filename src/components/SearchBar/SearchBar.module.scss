@@ -1,0 +1,17 @@
+.search {
+  border: 1px solid #fff;
+  display: flex;
+  gap: 5px;
+
+  &__input {
+    flex: 1 0 0;
+  }
+
+  &__button {
+    width: 200px;
+  }
+
+  &__svg {
+    height: 30px;
+  }
+}

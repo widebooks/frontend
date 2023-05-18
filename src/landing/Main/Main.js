@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import MiniSearch from "components/MiniSearch"
+
 // import Header from "./components/Header";
 // import Template from "./components/Template";
 
@@ -35,8 +38,6 @@ import testimonial2 from "global/images/testimonial/testimonial2.jpg";
 import testimonial3 from "global/images/testimonial/testimonial3.jpg";
 import testimonial4 from "global/images/testimonial/testimonial4.jpg";
 
-import deloit from "global/images/deloit.svg";
-import erricson from "global/images/erricson.svg";
 import netflix from "global/images/netflix.svg";
 import instagram from "global/images/instagram.svg";
 import coinbase from "global/images/coinbase.svg";
@@ -61,7 +62,12 @@ import contact from "global/images/contact.jpg";
 //   )
 // }
 
-const Main = () => {
+
+const Main = ({
+  stringSearch,
+
+  onSearch
+              }) => {
   return (
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
       <div id="mobile-menu-overlay"></div>
@@ -81,6 +87,9 @@ const Main = () => {
             <ul className="navbar-nav ml-auto align-items-center">
               <li className="nav-item active">
                 <a className="nav-link" href="#home">О нас<span className="sr-only">(current)</span></a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#search">Поиск книги</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#services">Преимущества</a>
@@ -130,6 +139,12 @@ const Main = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="our-services" id="search">
+          <div className="container">
+            <MiniSearch />
           </div>
         </section>
 
@@ -555,5 +570,14 @@ const Main = () => {
       </footer>
     </body>
 )}
+
+Main.propTypes = {
+  stringSearch: PropTypes.string,
+  onSearch: PropTypes.func,
+};
+
+Main.defaultProps = {
+  onSearch: () => {}
+};
 
 export default Main;
