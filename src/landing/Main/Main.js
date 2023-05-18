@@ -427,7 +427,7 @@ const Main = () => {
               <h3 className="font-weight-medium text-dark" style={{marginBottom: '20px'}}>Источники с книгами</h3>
               <div className="col-sm-12">
                 <div className="d-sm-flex justify-content-between align-items-center" style={{flexWrap: 'wrap'}}>
-                  <div style={{display: 'flex'}}>
+                  <div style={{display: 'flex', alignItems: 'center'}}>
                     <img src={alibLogo} alt="alib" className="p-2 p-lg-0" data-aos="fade-down"
                          data-aos-offset="-400" style={{height: '75px'}}/>
                     <img src={alibText} alt="alib" className="p-2 p-lg-0" data-aos="fade-down"
