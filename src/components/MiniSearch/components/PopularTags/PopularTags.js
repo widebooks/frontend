@@ -5,28 +5,33 @@ import { StyledEngineProvider } from "@mui/material/styles";
 
 import cl from "./PopularTags.module.scss";
 
-const PopularTags = ({className}) => {
+const PopularTags = ({tags, className}) => {
 
   return (
     <StyledEngineProvider injectFirst>
+      <div className={cl.title}>
+        Наиболее популярные запросы
+      </div>
       <ButtonGroup
         size="large"
         variant="text"
         aria-label="text button group"
         className={cn(cl.buttons, className)}>
-        <Button>1 самый популярный тэг</Button>
-        <Button>2 самый популярный тэг</Button>
-        <Button>3 самый популярный тэг</Button>
+        {
+          tags.map(t => <Button key={t.id}>{t.title}</Button>)
+        }
       </ButtonGroup>
     </StyledEngineProvider>
   )
 }
 
 PopularTags.propTypes = {
+  tags: PropTypes.array,
   className: PropTypes.string,
 };
 
 PopularTags.defaultProps = {
+  tags: []
 };
 
 

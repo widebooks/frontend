@@ -64,10 +64,12 @@ import contact from "global/images/contact.jpg";
 
 
 const Main = ({
-  stringSearch,
-
-  onSearch
-              }) => {
+  tags,
+  genres,
+  currentGenre,
+  onSearch,
+  onSelectGenre,
+}) => {
   return (
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
       <div id="mobile-menu-overlay"></div>
@@ -144,7 +146,13 @@ const Main = ({
 
         <section className="our-services" id="search">
           <div className="container">
-            <MiniSearch />
+            <MiniSearch
+              tags={tags}
+              genres={genres}
+              currentGenre={currentGenre}
+              onSearch={onSearch}
+              onSelectGenre={onSelectGenre}
+            />
           </div>
         </section>
 
@@ -572,7 +580,6 @@ const Main = ({
 )}
 
 Main.propTypes = {
-  stringSearch: PropTypes.string,
   onSearch: PropTypes.func,
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from "prop-types";
 import {Button, TextField} from "@mui/material";
 import cn from "classnames";
@@ -8,9 +8,9 @@ import {ReactComponent as SearchSVG} from "./static/search.svg";
 
 const SearchBar = ({
   className,
-  onInput,
-  obSearch
+  onSearch
 }) => {
+  const [search, setSearch] = useState();
 
   return (
     <div className={cn(cl.search, className)}>
@@ -19,10 +19,13 @@ const SearchBar = ({
         label="Быстрый поиск книги"
         variant="standard"
         className={cl.search__input}
+        value={search}
+        onInput={(e) => setSearch(e?.target.value)}
       />
       <Button
         variant="outlined"
         startIcon={<SearchSVG className={cl.search__svg}/>}
+        onClick={() => onSearch(search)}
       >
         Поиск
       </Button>
