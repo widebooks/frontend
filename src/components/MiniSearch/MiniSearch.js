@@ -3,14 +3,22 @@ import SearchBar from "components/SearchBar";
 
 import PopularTags from "./components/PopularTags";
 import Genres from "./components/Genres";
+import ListBooks from "./components/ListBooks";
 
 import cl from "./MiniSearch.module.scss";
 
 const MiniSearch = ({
+  searchString,
+  books,
   tags,
-  currentGenre,
+  selectTag,
+  currentGenres,
   genres,
+  pathBook,
+  pathAvatar,
   onSearch,
+  onChangeSearchString,
+  onSelectTag,
   onSelectGenre,
 }) => {
 
@@ -18,21 +26,27 @@ const MiniSearch = ({
     <div className={cl.search}>
       <SearchBar
         className={cl.search__bar}
+        searchString={searchString}
         onSearch={onSearch}
+        onChangeSearchString={onChangeSearchString}
       />
       <PopularTags
         tags={tags}
+        selectTag={selectTag}
         className={cl.search__tags}
+        onSelectTag={onSelectTag}
       />
       <Genres
         genres={genres}
-        currentGenre={currentGenre}
-        onSelectGenre={onSelectGenre}
+        currentGenres={currentGenres}
         className={cl.search__genres}
+        onSelectGenre={onSelectGenre}
       />
-      <div>
-        Список книг undefined
-      </div>
+      <ListBooks
+        books={books}
+        pathBook={pathBook}
+        pathAvatar={pathAvatar}
+      />
     </div>
   )
 }

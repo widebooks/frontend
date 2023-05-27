@@ -1,0 +1,6 @@
+@mixin animationTransition ($property) {
+  transition:         $property .3s linear;
+  -moz-transition:    $property .3s linear;
+  -o-transition:      $property .3s linear;
+  -webkit-transition: $property .3s linear;
+}

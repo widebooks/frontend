@@ -1,0 +1,13 @@
+@import "styles/colors";
+
+@mixin shadowBlock () {
+  box-shadow: 0 0 6px 3px $shadow-block;
+}
+
+@mixin shadowBlockHover () {
+  box-shadow: 0 0 8px 4px $shadow-block-hover;
+}
+
+@mixin shadowBlockHover () {
+  box-shadow: 0 0 10px 4px $shadow-block-focus;
+}

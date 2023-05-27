@@ -1,0 +1,37 @@
+@import "styles/colors";
+
+@mixin scrollbar(
+  $thumbColor: $color-border,
+  $radius: 60px,
+  $width: 6px,
+  $height: 6px,
+  $trackColor: transparent
+) {
+  scrollbar-color: $thumbColor $trackColor;
+  scrollbar-width: thin;
+
+  /* total width */
+  &::-webkit-scrollbar {
+    width: $width;
+
+    /* horizontal scrollbar height */
+    height: $height;
+  }
+
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track {
+    background-color: $trackColor;
+  }
+
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb {
+    border: none;
+    background-color: $thumbColor;
+    border-radius: $radius;
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}

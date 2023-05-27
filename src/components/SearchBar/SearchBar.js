@@ -7,10 +7,11 @@ import cl from "./SearchBar.module.scss";
 import {ReactComponent as SearchSVG} from "./static/search.svg";
 
 const SearchBar = ({
+  searchString,
   className,
+  onChangeSearchString,
   onSearch
 }) => {
-  const [search, setSearch] = useState();
 
   return (
     <div className={cn(cl.search, className)}>
@@ -19,13 +20,13 @@ const SearchBar = ({
         label="Быстрый поиск книги"
         variant="standard"
         className={cl.search__input}
-        value={search}
-        onInput={(e) => setSearch(e?.target.value)}
+        value={searchString}
+        onInput={(e) => onChangeSearchString(e?.target.value)}
       />
       <Button
         variant="outlined"
         startIcon={<SearchSVG className={cl.search__svg}/>}
-        onClick={() => onSearch(search)}
+        onClick={() => onSearch(searchString)}
       >
         Поиск
       </Button>
@@ -35,12 +36,12 @@ const SearchBar = ({
 
 SearchBar.propTypes = {
   className: PropTypes.string,
-  onInput: PropTypes.func,
+  onChangeSearchString: PropTypes.func,
   obSearch: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
-  onInput: () => {},
+  onChangeSearchString: () => {},
   obSearch: () => {},
 };
 

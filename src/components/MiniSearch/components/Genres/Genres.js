@@ -3,7 +3,14 @@ import cn from "classnames";
 import {Chip} from "@mui/material";
 import cl from "./Genres.module.scss";
 
-const Genres = ({genres, currentGenre, className, onSelectGenre}) => {
+const Genres = ({genres, currentGenres, className, onSelectGenre}) => {
+  const isSelectGenre = (v) => {
+    if (!currentGenres) {
+      return false
+    }
+
+    return currentGenres.map(v => v.id).includes(v.id)
+  }
 
   return (
     <div className={cn(cl.genres, className)}>
@@ -13,10 +20,12 @@ const Genres = ({genres, currentGenre, className, onSelectGenre}) => {
           genres.length ? (
             genres.map(g => (
               <Chip
+                key={g.id}
                 label={g.title}
-                color={g.id === currentGenre.id ? "primary" : "default"}
-                variant={g.id === currentGenre.id ? "primary" : "outlined"}
+                color={isSelectGenre(g) ? "primary" : "default"}
+                variant={isSelectGenre(g) ? "primary" : "outlined"}
                 onClick={() => onSelectGenre(g)}
+                onDelete={isSelectGenre(g) ? () => onSelectGenre(g) : null}
               />
             ))
           ) : (
@@ -31,15 +40,15 @@ const Genres = ({genres, currentGenre, className, onSelectGenre}) => {
 }
 
 Genres.propTypes = {
-  genres: PropTypes.string,
-  currentGenre: PropTypes.string,
+  genres: PropTypes.array,
+  currentGenres: PropTypes.array,
   className: PropTypes.string,
   onSelectGenre: PropTypes.func,
 };
 
 Genres.defaultProps = {
   genres: [],
-  currentGenre: "",
+  currentGenres: [],
   onSelectGenre: () => {},
 };
 

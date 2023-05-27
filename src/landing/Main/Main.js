@@ -63,13 +63,7 @@ import contact from "global/images/contact.jpg";
 // }
 
 
-const Main = ({
-  tags,
-  genres,
-  currentGenre,
-  onSearch,
-  onSelectGenre,
-}) => {
+const Main = () => {
   return (
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
       <div id="mobile-menu-overlay"></div>
@@ -146,13 +140,16 @@ const Main = ({
 
         <section className="our-services" id="search">
           <div className="container">
-            <MiniSearch
-              tags={tags}
-              genres={genres}
-              currentGenre={currentGenre}
-              onSearch={onSearch}
-              onSelectGenre={onSelectGenre}
-            />
+            {/*<MiniSearch*/}
+            {/*  tags={tags}*/}
+            {/*  books={books}*/}
+            {/*  genres={genres}*/}
+            {/*  currentGenre={currentGenre}*/}
+            {/*  onSearch={onSearch}*/}
+            {/*  onSelectGenre={onSelectGenre}*/}
+            {/*/>*/}
+            {/* Контейнер внутри MiniSearch - widget, который может переиспользоваться по всему приложению*/}
+            <MiniSearch />
           </div>
         </section>
 

@@ -1,0 +1,23 @@
+@import "styles/scrollbar";
+@import "styles/colors";
+@import "styles/shadows";
+
+.list {
+  @include scrollbar($color-border, 60px, 8px);
+  @include shadowBlock();
+
+  max-height: 450px;
+  overflow-y: auto;
+
+  padding: 5px;
+  border: 2px solid $color-border;
+  border-radius: 5px;
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

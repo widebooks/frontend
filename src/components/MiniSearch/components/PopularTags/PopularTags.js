@@ -5,7 +5,7 @@ import { StyledEngineProvider } from "@mui/material/styles";
 
 import cl from "./PopularTags.module.scss";
 
-const PopularTags = ({tags, className}) => {
+const PopularTags = ({tags, selectTag, className, onSelectTag}) => {
 
   return (
     <StyledEngineProvider injectFirst>
@@ -18,7 +18,15 @@ const PopularTags = ({tags, className}) => {
         aria-label="text button group"
         className={cn(cl.buttons, className)}>
         {
-          tags.map(t => <Button key={t.id}>{t.title}</Button>)
+          tags.map(t => (
+            <Button
+              key={t.id}
+              variant={selectTag?.id === t.id ? "contained" : "text"}
+              onClick={() => onSelectTag(t)}
+            >
+              {t.title}
+            </Button>
+          ))
         }
       </ButtonGroup>
     </StyledEngineProvider>
@@ -27,11 +35,14 @@ const PopularTags = ({tags, className}) => {
 
 PopularTags.propTypes = {
   tags: PropTypes.array,
+  selectTag: PropTypes.object,
   className: PropTypes.string,
+  onSelectTag: PropTypes.func,
 };
 
 PopularTags.defaultProps = {
-  tags: []
+  tags: [],
+  onSelectTag: () => {}
 };
 
 
