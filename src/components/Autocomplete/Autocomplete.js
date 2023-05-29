@@ -28,7 +28,7 @@ Autocomplete.propTypes = {
 };
 
 Autocomplete.defaultProps = {
-    title: "Автор",
+  title: "Автор",
   options: [],
 };
 

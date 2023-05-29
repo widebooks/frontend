@@ -99,6 +99,8 @@ const ShopCounterContainerMock = () => {
 
   },[inputtedCity, inputtedAuthor])
 
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
     <ShopCounter
       //---------------ФИЛЬТРЫ---------------
@@ -141,9 +143,14 @@ const ShopCounterContainerMock = () => {
       rangeValueYear={rangeValueYear}
       getOnChangeRangeValueYear={getOnChangeRangeValueYear}
       //---------------Книги---------------
-      books={books}
+      // books={books.slice(currentPage > 1 ? currentPage * 10 - 10 : 0, (currentPage + 1) * 10)}
+      books={books.slice((currentPage - 1) * 10, currentPage * 10)}
       pathBook="images/books"
       pathAvatar="images/avatars"
+      //------------Пагинация--------------
+      countPage={Math.ceil(books.length / 10)}
+      currentPage={currentPage}
+      onChangePage={(_, v) => setCurrentPage(v)}
     />
   )
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "components/Header";
 import Container from "components/Container";
 import SearchBar from "components/SearchBar";
+import Pagination from "components/Pagination";
 
 import Filter from "./components/Filter";
 // import Sort from "./components/Sort";
@@ -48,7 +49,12 @@ const ShopCounter = ({
                        //КНИГИ
                        books,
                        pathBook,
-                       pathAvatar
+                       pathAvatar,
+
+  //ПАГИНАЦИЯ
+                       countPage,
+                       currentPage,
+                       onChangePage,
 }) => {
 
   return (
@@ -103,6 +109,11 @@ const ShopCounter = ({
             />
           </div>
         </div>
+        <Pagination
+          countPage={countPage}
+          currentPage={currentPage}
+          onChangePage={onChangePage}
+        />
       </Container>
     </div>
   )
