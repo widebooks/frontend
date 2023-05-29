@@ -1,0 +1,21 @@
+@import "styles/colors";
+
+.empty {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  overflow-y: visible;
+
+  &__svg {
+    height: 100%;
+    flex: 0 0 35%;
+    fill: $color-background-svg;
+    color: $color-background-svg;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    color: $color-font;
+    font-size: 32px;
+  }
+}

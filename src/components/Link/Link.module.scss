@@ -1,0 +1,37 @@
+@import "styles/animation";
+@import "styles/colors";
+
+$font-link-light: #b3e5fc;
+$font-link: #03a9f4;
+$font-link-darker: #0277bd;
+
+$shadow-link: #e3f2fd;
+
+.link {
+  padding: 4px 8px;
+  font-size: 26px;
+  font-weight: 600;
+  color: $font-link;
+  border-bottom: 1px solid $color-border;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 5px 2px $shadow-link;
+
+  &__isHover {
+    &:hover {
+      box-shadow: 0 3px 5px 10px $shadow-link;
+      color: $font-link-darker;
+    }
+
+    @include animationTransition(box-shadow);
+    @include animationTransition(color);
+  }
+
+
+
+  &__active {
+    color: $font-link-light;
+    box-shadow: 0 3px 5px 10px $shadow-link;
+    border-bottom: 3px solid $color-border;
+    background-color: $color-background-darker;
+  }
+}

@@ -1,0 +1,3 @@
+import PersonalAccountContainerMock from "./PersonalAccountContainerMock"
+
+export default PersonalAccountContainerMock;

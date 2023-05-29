@@ -1,16 +1,27 @@
-$font-primary-light: #637bfe; // Для
+$font-primary-light: #3548c1; // Для
 $color-font: #3d5afe; //Для контента
 $color-font-darker: #2a3eb1; //Для заголовка
 
-$font-Secondary-light: #1769aa;
-$font-Secondary: #2196f3;
-$font-Secondary-darker: #4dabf5;
+$font-Secondary-light: #7986cb;
+$font-Secondary: #3f51b5;
+$font-Secondary-darker: #283593;
 
 //Тени для блока (НЕ МОДАЛКИ, ТУЛТИПА ПО ВЕРХ КОНТЕНТА)
 $shadow-block: #7c88cc;
 $shadow-block-hover: #5c6bc0;
 $shadow-block-focus: #404a86;
 
+$color-border-hover: #4f64d0;
 $color-border: #2a3eb1;
+$color-border-active: #0d25b7;
 
 $color-background-svg: $font-primary-light;
+$color-background-svg-darker: #3548CF;
+
+$color-background-light: #bbdefb;
+$color-background: #42a5f5;
+$color-background-darker: #1e88e5;
+
+
+
+

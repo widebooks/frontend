@@ -7,6 +7,7 @@ import cl from "./SearchBar.module.scss";
 import {ReactComponent as SearchSVG} from "./static/search.svg";
 
 const SearchBar = ({
+  title,
   searchString,
   className,
   onChangeSearchString,
@@ -17,7 +18,7 @@ const SearchBar = ({
     <div className={cn(cl.search, className)}>
       <TextField
         id="standard-basic"
-        label="Быстрый поиск книги"
+        label={title}
         variant="standard"
         className={cl.search__input}
         value={searchString}
@@ -35,14 +36,16 @@ const SearchBar = ({
 }
 
 SearchBar.propTypes = {
+  title: PropTypes.string,
   className: PropTypes.string,
   onChangeSearchString: PropTypes.func,
-  obSearch: PropTypes.func,
+  onSearch: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
+  title: "Поиск книги",
   onChangeSearchString: () => {},
-  obSearch: () => {},
+  onSearch: () => {},
 };
 
 export default SearchBar;

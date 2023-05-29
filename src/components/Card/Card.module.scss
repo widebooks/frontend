@@ -1,0 +1,70 @@
+@import "styles/animation";
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  height: 180px;
+  padding: 25px;
+
+  &__imageWrapper {
+    flex: 0 0 22%;
+  }
+
+  &__info {
+    flex: 0 0 calc(78% - 15px);
+    height: 100%;
+  }
+
+  &__image {
+    &:hover {
+      position:relative;
+      z-index: 1;
+      cursor: pointer;
+      transform: scale(1.7);
+      @include animationTransition(transform);
+    }
+  }
+}
+
+.content {
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    height: 28px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+
+  &__text {
+    height: calc(135px - 68px);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    &_hidden {
+      width: calc(100% - 75px);
+      position: absolute;
+      opacity: 0;
+    }
+  }
+}

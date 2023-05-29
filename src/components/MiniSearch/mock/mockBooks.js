@@ -1,4 +1,4 @@
-import {GENRE} from "./../constants";
+import {GENRE} from "constants.js";
 
 const {DETECTIVE, HISTORY, POPULAR_SCIENCE, FICTION, ANTIQUES, EDUCATIONAL, SCIENCE, TRAVEL, ART, INDUSTRY} = GENRE;
 
@@ -14,7 +14,10 @@ const mockBooks = [
     genres: [TRAVEL, EDUCATIONAL],
     images: ["114057_preview.jpg"],
     dateWriting: "1923 г",
-    seller: "Вычесов Дмитрий",
+    seller: {
+      name: "ООО Бухгалтерия",
+      id: 1
+    },
     rating: 2
   },
   {
@@ -27,7 +30,10 @@ const mockBooks = [
     genres: [DETECTIVE],
     images: ["l113994_1.jpg", "l113994_3.jpg"],
     dateWriting: "1967 г",
-    seller: "Иринов Олега",
+    seller: {
+      name: "ООО Книжный дом",
+      id: 2
+    },
     rating: 1
   },
   {
@@ -38,7 +44,10 @@ const mockBooks = [
     author: "Н.К. Шильдер",
     genres: [HISTORY, ANTIQUES],
     images: ["l114365_1.jpg"],
-    seller: "Голованов Дмитрий",
+    seller: {
+      name: "ЮЛ Книга.РУ",
+      id: 4
+    },
     rating: 8,
     avatar: "123123132.jfif",
   },
@@ -50,7 +59,10 @@ const mockBooks = [
     genres: [TRAVEL, EDUCATIONAL],
     images: ["114273_preview.jpg"],
     dateWriting: "1946-1948 гг",
-    seller: "Неумелов Павел",
+    seller: {
+      name: "Ч Копчигин О.Ю.",
+      id: 5
+    },
     rating: 4
   },
   {
@@ -60,7 +72,10 @@ const mockBooks = [
     author: "",
     genres: [HISTORY, ANTIQUES],
     images: ["l114363_1.jpg"],
-    seller: "Снежаннов Алексей",
+    seller: {
+      name: "Смирнов Б.В.",
+      id: 6
+    },
     rating: 6,
     avatar: "Без названия.jfif",
   },
@@ -72,7 +87,10 @@ const mockBooks = [
     genres: [FICTION, TRAVEL],
     images: ["l114354_1.jpg"],
     dateWriting: "1903 г",
-    seller: "Песков Владимир",
+    seller: {
+      name: "ООО Книжный двор",
+      id: 7
+    },
     rating: 0.5,
     avatar: "thumb_20140128010209216.jpg",
   },
@@ -83,7 +101,10 @@ const mockBooks = [
     author: "С.Т. Аксаков",
     genres: [FICTION, ART],
     dateWriting: "1886 г",
-    seller: "Гусев Павел",
+    seller: {
+      name: "ЮЛ Книжный",
+      id: 3
+    },
     rating: 3.4
   },
   {
@@ -95,7 +116,10 @@ const mockBooks = [
     genres: [DETECTIVE],
     images: "",
     dateWriting: "1912-1913 гг",
-    seller: "Путин Владимир",
+    seller: {
+      name: "Ч Копчигин О.Ю.",
+      id: 5
+    },
     rating: 8
   },
   {
@@ -108,7 +132,10 @@ const mockBooks = [
     genres: [TRAVEL, ART],
     images: ["l114350_1.jpg"],
     dateWriting: "1936 г",
-    seller: "Днепропетровский Иван",
+    seller: {
+      name: "ООО Бухгалтерия",
+      id: 1
+    },
     rating: 10
   },
   {
@@ -121,7 +148,10 @@ const mockBooks = [
     genres: [TRAVEL, FICTION],
     images: ["l114331_1.jpg"],
     dateWriting: "1928 г",
-    seller: "Жизнепоучительский Антон",
+    seller: {
+      name: "ЮЛ Книга.РУ",
+      id: 4
+    },
     rating: 3.4
   },
   {
@@ -132,7 +162,10 @@ const mockBooks = [
     author: "С.С. Татищев",
     genres: [HISTORY, ANTIQUES],
     images: ["l114366_1.jpg"],
-    seller: "Павловна Евгения",
+    seller: {
+      name: "Ч Копчигин О.Ю.",
+      id: 5
+    },
     rating: 3.4,
     avatar: "j--uNscezS8.jpg",
   },
@@ -147,7 +180,10 @@ const mockBooks = [
     genres: [POPULAR_SCIENCE, EDUCATIONAL],
     images: ["l114353_1.jpg", "l114353_3.jpg", "l114353_8.jpg", "l114353_24.jpg"],
     dateWriting: "1945 г",
-    seller: "Шайгу Иван",
+    seller: {
+      name: "Ч Смирнов Б.В.",
+      id: 6
+    },
     rating: 2
   },
   {
@@ -159,7 +195,10 @@ const mockBooks = [
     genres: [POPULAR_SCIENCE, EDUCATIONAL],
     images: ["l114234_1.jpg", "l114234_12.jpg"],
     dateWriting: "1934 г",
-    seller: "Соболев Илья",
+    seller: {
+      name: "ООО Бухгалтерия",
+      id: 1
+    },
     rating: 7
   },
   {
@@ -170,7 +209,10 @@ const mockBooks = [
     genres: [DETECTIVE],
     images: ["l114172_3.jpg", "l114172_1.jpg", "l114172_19.jpg"],
     dateWriting: "По 1911-1913 гг",
-    seller: "Техник Паша",
+    seller: {
+      name: "Ч Смирнов Б.В.",
+      id: 6
+    },
     rating: 1
   },
 
@@ -182,7 +224,10 @@ const mockBooks = [
     genres: [INDUSTRY],
     images: ["16849438114493.jpg"],
     dateWriting: "1979 г",
-    seller: "Пётров Пётр",
+    seller: {
+      name: "Ч Смирнов Б.В.",
+      id: 6
+    },
     rating: 1
   },
 ]

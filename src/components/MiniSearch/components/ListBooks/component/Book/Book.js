@@ -18,6 +18,7 @@ const Book = ({
         <Image
           path={pathBook}
           file={book.images?.[0]}
+          type="book"
           view="contain"
           className={cn({
             [cl.book__image]: book.images?.[0]
@@ -46,7 +47,7 @@ const Book = ({
           <Avatar
             path={pathAvatar}
             file={book.avatar}
-            name={book.seller}
+            name={book?.seller.name}
           />
         </div>
       </div>

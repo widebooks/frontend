@@ -126,7 +126,10 @@ const Main = () => {
                         <p>✓ Создание вовлеченного коммьюнити в тематику книг</p>
                       </p>
                       {/*<a href="#" className="btn btn-secondary mt-3">Узнать больше</a>*/}
-                      <Link to="info" className="btn btn-secondary mt-3">Узнать больше</Link>
+                      <div>
+                        <Link to="shop-counter" className="btn btn-secondary mt-3" style={{marginRight: '15px'}}>Перейти в само приложение</Link>
+                        <Link to="info" className="btn btn-secondary mt-3">Узнать больше</Link>
+                      </div>
                     </div>
                     <div className="mt-5 mt-lg-0">
                       <img src={group} alt="marsmello" className="img-fluid" data-aos="zoom-in-up" />

@@ -1,3 +1,3 @@
-import ListBooks from "./ListBooks";
+import ListBook from "./ListBook";
 
-export default ListBooks;
+export default ListBook;

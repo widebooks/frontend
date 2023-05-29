@@ -1,9 +1,9 @@
 import React from "react";
 import SearchBar from "components/SearchBar";
+import Tabs from "components/Tabs";
 
-import PopularTags from "./components/PopularTags";
 import Genres from "./components/Genres";
-import ListBooks from "./components/ListBooks";
+import ListBook from "./components/ListBooks";
 
 import cl from "./MiniSearch.module.scss";
 
@@ -25,15 +25,18 @@ const MiniSearch = ({
   return (
     <div className={cl.search}>
       <SearchBar
+        title="Быстрый поиск книги"
         className={cl.search__bar}
         searchString={searchString}
         onSearch={onSearch}
         onChangeSearchString={onChangeSearchString}
       />
-      <PopularTags
+      <Tabs
+        title="Наиболее популярные запросы"
         tags={tags}
         selectTag={selectTag}
         className={cl.search__tags}
+        classNameTitle={cl.search__tags}
         onSelectTag={onSelectTag}
       />
       <Genres
@@ -42,7 +45,7 @@ const MiniSearch = ({
         className={cl.search__genres}
         onSelectGenre={onSelectGenre}
       />
-      <ListBooks
+      <ListBook
         books={books}
         pathBook={pathBook}
         pathAvatar={pathAvatar}

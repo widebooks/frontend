@@ -1,0 +1,23 @@
+.header {
+  margin-bottom: 20px;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  & > div {
+    &:first-child {
+      flex: 0 0 250px;
+    }
+
+    &:last-child {
+      flex: 1 0 0;
+    }
+  }
+}
