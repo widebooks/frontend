@@ -25,11 +25,13 @@ const Autocomplete = ({
 Autocomplete.propTypes = {
   title: PropTypes.string,
   options: PropTypes.array,
+  onChange: PropTypes.func,
 };
 
 Autocomplete.defaultProps = {
   title: "Автор",
   options: [],
+  onChange: () => {}
 };
 
 export default Autocomplete
