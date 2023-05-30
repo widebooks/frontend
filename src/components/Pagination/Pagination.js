@@ -7,6 +7,7 @@ import cl from "./Pagination.module.scss";
 const BasicPagination = ({
   countPage,
   currentPage,
+  className,
   onChangePage
 }) => {
   return (
@@ -26,6 +27,7 @@ const BasicPagination = ({
 BasicPagination.propTypes = {
   countPage: PropTypes.number,
   currentPage: PropTypes.number,
+  className: PropTypes.string,
   onChangePage: PropTypes.array,
 };
 

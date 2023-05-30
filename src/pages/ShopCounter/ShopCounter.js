@@ -3,6 +3,7 @@ import Header from "components/Header";
 import Container from "components/Container";
 import SearchBar from "components/SearchBar";
 import Pagination from "components/Pagination";
+import Footer from "components/Footer";
 
 import Filter from "./components/Filter";
 // import Sort from "./components/Sort";
@@ -113,8 +114,10 @@ const ShopCounter = ({
           countPage={countPage}
           currentPage={currentPage}
           onChangePage={onChangePage}
+          className={cl.pagination}
         />
       </Container>
+      <Footer />
     </div>
   )
 }
