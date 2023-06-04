@@ -6,7 +6,6 @@ import mockTags from "./mock/mockTags";
 import mockGenres from "./mock/mockGenres";
 import mockBooks from "./mock/mockBooks";
 
-
 export default {
   title: "Widgets/MiniSearch",
   component: MiniSearch,

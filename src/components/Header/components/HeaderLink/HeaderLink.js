@@ -9,7 +9,7 @@ const HeaderLink = ({
   children
 }) => {
   return (
-    <RouterLink to={path}>
+    <RouterLink to={path} className={cl.link__wrapper}>
       {({ isActive }) => (
         <div className={isActive ? cn(cl.link, cl.link__active) : cn(cl.link, cl.link__isHover)}>
           {children}

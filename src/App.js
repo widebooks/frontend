@@ -5,6 +5,7 @@ import ShopCounter from "pages/ShopCounter";
 import Buy from "pages/Buy";
 import Sale from "pages/Sale";
 import PersonalAccount from "pages/PersonalAccount";
+import Product from "pages/Product";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
         {/*App:*/}
         <Route path="/shop-counter" element={ <ShopCounter />} />
+        <Route path="/product" element={ <Product />} />
         <Route path="/buy" element={ <Buy />} />
         <Route path="/sale" element={ <Sale />} />
         <Route path="/personal-account" element={ <PersonalAccount />} />

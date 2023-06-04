@@ -1,8 +1,8 @@
-import ShopCounter from "pages/ShopCounter";
+import Product from "pages/Product";
 
 export default {
-  title: "Pages/ShopCounter",
-  component: ShopCounter,
+  title: "Pages/Product",
+  component: Product,
   argTypes: {},
   decorators: [
     Story => (
@@ -15,7 +15,7 @@ export default {
 
 const Template = () => {
   return (
-    <ShopCounter/>
+    <Product/>
   );
 };
 
