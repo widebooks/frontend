@@ -18,7 +18,6 @@ export default {
 
 const Template = () => {
   const [inputtedAuthor, setInputtedAuthor] = useState("");
-  console.log('mockAuthors', mockAuthors);
 
   return (
     <Autocomplete

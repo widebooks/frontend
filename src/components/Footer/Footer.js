@@ -13,10 +13,10 @@ import {ReactComponent as InstagramSVG} from "./static/instagram.svg";
 import {ReactComponent as VkontakteSVG} from "./static/vkontakte.svg";
 import {ReactComponent as YoutubeSVG} from "./static/youtube.svg";
 
-const Footer = () => {
+const Footer = ({className}) => {
 
   return (
-    <div className={cl.footer}>
+    <div className={cn(cl.footer, className)}>
       <Container className={cl.footer__container}>
         <div>
           <div className={cl.flexAlign}>

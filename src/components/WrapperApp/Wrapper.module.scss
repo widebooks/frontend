@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 0 calc(100% - 110px - 210px - 40px);
+}
+
+.header{
+  margin-bottom: 20px;
+  flex: 0 0 110px;
+}
+
+.footer {
+  justify-items: flex-end;
+  margin-top: 20px;
+  flex: 0 0 210px;
+}

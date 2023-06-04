@@ -8,9 +8,6 @@ const ButtonIcon = ({
                       icon,
 
                     }) => {
-  console.log('children', icon);
-  console.log('icon', icon);
-
   return (
     <button className={cl.button}>
       {children || icon}
