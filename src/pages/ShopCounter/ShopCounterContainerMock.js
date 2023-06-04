@@ -43,7 +43,6 @@ const ShopCounterContainerMock = () => {
   const [inputtedAuthor, setInputtedAuthor] = useState("");
   const [inputtedCity, setInputtedCity] = useState("");
 
-
   const [selectedTypeProduct, setSelectedTypeProduct] = useState({});
 
   const [categories, setCategories] = useState({
@@ -144,7 +143,6 @@ const ShopCounterContainerMock = () => {
       rangeValueYear={rangeValueYear}
       getOnChangeRangeValueYear={getOnChangeRangeValueYear}
       //---------------Книги---------------
-      // books={books.slice(currentPage > 1 ? currentPage * 10 - 10 : 0, (currentPage + 1) * 10)}
       books={books.slice((currentPage - 1) * 10, currentPage * 10)}
       pathBook={PATH_BOOKS_MODEL_FRONT}
       pathAvatar={PATH_AVATARS_MODEL_FRONT}

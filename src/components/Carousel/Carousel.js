@@ -11,7 +11,9 @@ const Carousel = ({
   title,
   items,
   pathToImage,
-  customSettings
+  customSettings,
+                    className,
+                    classNameImage,
 }) => {
   const settings = {
     dots: true,
@@ -23,7 +25,7 @@ const Carousel = ({
   };
 
   return (
-    <div>
+    <div className={cn(cl.slick__wrapper, className)}>
       {title && <h2>{title}</h2>}
       <Slider
         slickGoTo={() => {}}
@@ -37,7 +39,7 @@ const Carousel = ({
               key={v.id}
               path={pathToImage}
               file={v.srcImg}
-              className={cl.image}
+              className={cn(cl.slick__img, classNameImage)}
             />
           ))
         }
@@ -51,6 +53,8 @@ Carousel.propTypes = {
   items: PropTypes.array,
   pathToImage: PropTypes.string,
   customSettings: PropTypes.object,
+  className: PropTypes.string,
+  classNameImage: PropTypes.string,
 };
 
 Carousel.defaultProps = {

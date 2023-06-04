@@ -26,13 +26,16 @@ const MainContainerMock = () => {
   }
 
   useEffect(() => {
-    setBooks(mockBooks.filter(v => {
+    setBooks(mockBooks.filter(b => {
 
-      return ((isSubstringString(searchString, v.title) ||
-          isSubstringString(searchString, v.description)
+      return ((isSubstringString(searchString, b.title) ||
+          isSubstringString(searchString, b.description)
         ) &&
         (
-          currentGenres.length ? v?.genres?.find(g => currentGenres.map(v => v.id).includes(g)) : true
+          currentGenres.length ?
+            b?.genres?.find(g => currentGenres
+              .map(b => b.id).includes(g.id)) :
+            true
         ))
     }))
 
