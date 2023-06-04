@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import isSubstringString from "helpers/isSubstringString";
+import {PATH_BOOKS_MODEL_FRONT, PATH_AVATARS_MODEL_FRONT} from "constants";
 
 import ShopCounter from "./ShopCounter";
 import mockGenres from "./mock/mockGenres";
@@ -145,8 +146,8 @@ const ShopCounterContainerMock = () => {
       //---------------Книги---------------
       // books={books.slice(currentPage > 1 ? currentPage * 10 - 10 : 0, (currentPage + 1) * 10)}
       books={books.slice((currentPage - 1) * 10, currentPage * 10)}
-      pathBook="images/books"
-      pathAvatar="images/avatars"
+      pathBook={PATH_BOOKS_MODEL_FRONT}
+      pathAvatar={PATH_AVATARS_MODEL_FRONT}
       //------------Пагинация--------------
       countPage={Math.ceil(books.length / 10)}
       currentPage={currentPage}

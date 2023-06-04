@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import isSubstringString from "helpers/isSubstringString";
+import {PATH_BOOKS_MODEL_FRONT, PATH_AVATARS_MODEL_FRONT} from "constants";
 
 import MiniSearch from "./MiniSearch";
 import mockTags from "./mock/mockTags";
@@ -66,8 +67,8 @@ const Template = () => {
       selectTag={selectTag}
       genres={mockGenres}
       currentGenres={currentGenres}
-      pathBook="images/books"
-      pathAvatar="images/avatars"
+      pathBook={PATH_BOOKS_MODEL_FRONT}
+      pathAvatar={PATH_AVATARS_MODEL_FRONT}
       onSearch={handleSearch}
       onChangeSearchString={v => {setSearchString(v); setSelectTag({})}}
       onSelectTag={(v) => setSelectTag(v)}

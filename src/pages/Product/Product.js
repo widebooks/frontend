@@ -1,9 +1,14 @@
+import WrapperApp from "components/WrapperApp";
+
+import cl from "./Product.module.scss";
+
 const Product = () => {
 
   return (
-    <div>
-      Product
-    </div>
+    <WrapperApp>
+      <div className={cl.content}>
+      </div>
+    </WrapperApp>
   )
 }
 

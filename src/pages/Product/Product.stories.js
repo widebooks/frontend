@@ -1,4 +1,5 @@
 import Product from "pages/Product";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 export default {
   title: "Pages/Product",
@@ -6,9 +7,13 @@ export default {
   argTypes: {},
   decorators: [
     Story => (
-      <div style={{ margin: "20px" }}>
-        <Story />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={(
+            <Story />
+          )} />
+        </Routes>
+      </BrowserRouter>
     ),
   ],
 };

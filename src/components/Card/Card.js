@@ -19,7 +19,6 @@ const Card = ({
           path={pathBook}
           file={book.images?.[0]}
           type="book"
-          view="contain"
           className={cn({
             [cl.book__image]: book.images?.[0]
           })}

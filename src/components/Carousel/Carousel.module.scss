@@ -1,0 +1,19 @@
+@import "styles/colors";
+
+.image {
+  height: 250px;
+}
+
+.slick {
+  & > button {
+    //background-color: $color-background-svg;
+    &::before {
+      color: $color-background-svg-darker;
+    }
+  }
+
+  &__dots button::before{
+    color: $color-background-svg-darker !important;
+    font-size: 10px !important;
+  }
+}
