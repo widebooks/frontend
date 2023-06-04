@@ -58,7 +58,7 @@ const Template = () => {
 
     setSearchString(selectTag.title);
   }, [selectTag])
-  
+
   return (
     <MiniSearch
       searchString={searchString}

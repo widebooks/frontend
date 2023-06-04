@@ -1,0 +1,51 @@
+@import "styles/colors";
+
+.footer {
+  padding: 20px;
+  background-color: $color-background;
+  color: $font-Secondary-light;
+
+  &__logo {
+    height: 130px;
+  }
+
+  &__title {
+    font-size: 36px;
+    text-decoration-line: underline;
+    margin: 10px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icons {
+    width: 220px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    > button {
+      flex: 0 0 calc(50px - 5px);
+    }
+  }
+
+  &__links {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.flexAlign {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}

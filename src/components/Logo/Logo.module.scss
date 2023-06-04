@@ -2,10 +2,20 @@
 
 .logo {
   height: 100%;
-  width: 100%;
+  width: auto;
+
+  &_white {
+    & > g > path {
+      fill: #bbdefb !important;
+    }
+    > path {
+      fill: $color-White !important;
+    }
+  }
 
   &__wrapper {
     display: flex;
+    height: 100px;
   }
 
   &__copyright {
@@ -18,6 +28,10 @@
     > svg {
       width: 100%;
       height: 30%;
+    }
+
+    &_white {
+      color: $color-White;
     }
   }
 }

@@ -1,4 +1,6 @@
-import Footer from "components/Footer";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+import Footer from "./Footer";
 
 export default {
   title: "UI/Footer",
@@ -7,7 +9,13 @@ export default {
   decorators: [
     Story => (
       <div style={{ margin: "20px" }}>
-        <Story />
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={(
+              <Story />
+            )} />
+          </Routes>
+        </BrowserRouter>
       </div>
     ),
   ],
@@ -15,7 +23,7 @@ export default {
 
 const Template = () => {
   return (
-    <Footer/>
+    <Footer />
   );
 };
 

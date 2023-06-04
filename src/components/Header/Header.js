@@ -1,8 +1,8 @@
 import cn from "classnames";
 import Container from "components/Container";
 import Logo from "components/Logo";
-import Link from "components/Link";
 
+import HeaderLink from "./components/HeaderLink";
 import cl from "./Header.module.scss";
 
 const Header = ({className}) => {
@@ -12,10 +12,10 @@ const Header = ({className}) => {
       <Container className={cl.header__container}>
         <Logo className={cl.header__img} />
         <div className={cl.header__links}>
-          <Link path="/shop-counter">Книги</Link>
-          <Link path="/buy">Покупка</Link>
-          <Link path="/sale">Продажа</Link>
-          <Link path="/personal-account">Личный кабинет</Link>
+          <HeaderLink path="/shop-counter">Книги</HeaderLink>
+          <HeaderLink path="/buy">Покупка</HeaderLink>
+          <HeaderLink path="/sale">Продажа</HeaderLink>
+          <HeaderLink path="/personal-account">Личный кабинет</HeaderLink>
         </div>
       </Container>
     </div>

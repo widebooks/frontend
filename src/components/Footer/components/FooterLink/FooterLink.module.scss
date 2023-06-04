@@ -1,0 +1,31 @@
+@import "styles/animation";
+@import "styles/colors";
+
+.link {
+  &__wrapper {
+    text-decoration: none;
+  }
+
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $font-Secondary-light;
+
+  &__isHover {
+    &:hover {
+      color: $font-link-light;
+      text-decoration: underline;
+    }
+
+    @include animationTransition(color);
+    @include animationTransition(text-decoration);
+  }
+
+
+
+  &__active {
+    border-bottom: 3px solid $color-border;
+    background-color: $color-background-darker;
+  }
+}

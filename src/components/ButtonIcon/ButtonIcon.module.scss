@@ -1,0 +1,25 @@
+@import "styles/colors";
+@import "styles/animation";
+
+.button {
+  height: 50px;
+  width: 50px;
+  padding: 7px;
+  border-radius: 100px;
+  color: $color-background-svg-darker;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  @include animationTransition(background-color);
+
+  &:hover:not(&:disabled):not(&:active):not(.button_toggled) {
+    background-color: $color-background-light;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

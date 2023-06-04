@@ -2,13 +2,12 @@ import { NavLink as RouterLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-import cl from "./Link.module.scss";
+import cl from "./HeaderLink.module.scss";
 
-const Link = ({
+const HeaderLink = ({
   path,
   children
 }) => {
-
   return (
     <RouterLink to={path}>
       {({ isActive }) => (
@@ -20,13 +19,15 @@ const Link = ({
   )
 }
 
-Link.propTypes = {
+HeaderLink.propTypes = {
   path: PropTypes.string,
+  children: PropTypes.any,
 };
 
-Link.defaultProps = {
-  path: ""
+HeaderLink.defaultProps = {
+  path: "",
+  children: null
 };
 
 
-export default Link;
+export default HeaderLink;
