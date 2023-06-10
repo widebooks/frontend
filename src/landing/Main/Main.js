@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import MiniSearch from "components/MiniSearch"
+import MiniSearch from "widgets/MiniSearch"
 
 // import Header from "./components/Header";
 // import Template from "./components/Template";
