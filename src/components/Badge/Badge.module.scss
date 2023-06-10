@@ -1,0 +1,7 @@
+@import "styles/colors";
+
+.badge {
+  &__icon + span {
+    background-color: $color-background-svg-light;
+  }
+}

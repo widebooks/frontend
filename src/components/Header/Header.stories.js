@@ -1,3 +1,4 @@
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "components/Header";
 
 export default {
@@ -6,19 +7,29 @@ export default {
   argTypes: {},
   decorators: [
     Story => (
-      <div style={{ margin: "20px" }}>
-        <Story />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={(
+            <div style={{ margin: "20px" }}>
+              <Story />
+
+            </div>
+          )} />
+        </Routes>
+      </BrowserRouter>
     ),
   ],
 };
 
-const Template = () => {
+const Template = args => {
   return (
-    <Header/>
+    <Header {...args}/>
   );
 };
 
 export const Default = {
-  render: () => <Template />,
+  render: args => <Template {...args}/>,
+  args: {
+    countProductInBasket: 5
+  }
 };
