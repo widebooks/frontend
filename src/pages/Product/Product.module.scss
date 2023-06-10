@@ -51,5 +51,18 @@
 
   &__svg {
     height: 28px;
+    width: auto;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 }

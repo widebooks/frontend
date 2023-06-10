@@ -8,6 +8,7 @@ import cn from "classnames";
 
 import cl from "./Product.module.scss";
 import {ReactComponent as BusketSVG} from "./static/basket.svg";
+import {ReactComponent as StarSVG} from "./static/start.svg";
 
 const Product = ({
                    book,
@@ -50,9 +51,18 @@ const Product = ({
           <div className={cl.info__text}>
             <span>Описание</span>: {book.description ? book.description : "Описание к товару отсутствует"}
           </div>
-          <Button>
-            Добавить в корзину {" "} <BusketSVG className={cl.info__svg}/>
-          </Button>
+         <div className={cl.info__buttons}>
+           <Button className={cl.info__button}>
+             <div>
+               Добавить в корзину
+             </div>
+             <BusketSVG className={cl.info__svg}/>
+           </Button>
+           <Button variant="outlined" className={cl.info__button}>
+             <div>Добавить в избранное</div>
+             <StarSVG className={cl.info__svg}/>
+           </Button>
+         </div>
         </div>
       </div>
     </WrapperApp>
