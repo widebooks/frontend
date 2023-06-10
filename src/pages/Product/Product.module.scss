@@ -27,3 +27,29 @@
     height: 400px;
   }
 }
+
+.info {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__money {
+    margin-bottom: 6px;
+  }
+
+  &__rating {
+    margin-bottom: 12px;
+  }
+
+  &__genre {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__svg {
+    height: 28px;
+  }
+}

@@ -1,4 +1,4 @@
-import Card from "components/Card";
+import Card from "widgets/MiniSearch/components/ListBooks";
 import EmptySearch from "components/EmptySearch";
 
 import cl from "./ListBook.module.scss";

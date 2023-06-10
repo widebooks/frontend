@@ -1,4 +1,4 @@
-import ListBooks from "components/MiniSearch/components/ListBooks";
+import ListBooks from "widgets/MiniSearch/components/ListBooks";
 
 export default {
   title: "Widgets/MiniSearch/ListBooks",

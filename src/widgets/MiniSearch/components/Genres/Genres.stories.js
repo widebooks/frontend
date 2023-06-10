@@ -1,4 +1,4 @@
-import Genres from "components/MiniSearch/components/Genres";
+import Genres from "widgets/MiniSearch/components/Genres";
 
 export default {
   title: "Widgets/MiniSearch/Genres",
