@@ -1,7 +1,3 @@
-import {GENRE} from "constants.js";
-
-const {DETECTIVE, HISTORY, POPULAR_SCIENCE, FICTION, ANTIQUES, EDUCATIONAL, SCIENCE, TRAVEL, ART, INDUSTRY} = GENRE;
-
 const mockBooks = [
   {
     id: 15,
