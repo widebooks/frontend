@@ -1,9 +1,9 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import BuyContainerMock from "pages/Buy/BuyContainerMock";
+import BasketContainerMock from "pages/Basket/BasketContainerMock";
 
 export default {
-  title: "Pages/Buy",
-  component: BuyContainerMock,
+  title: "Pages/Basket",
+  component: BasketContainerMock,
   argTypes: {},
   decorators: [
     Story => (
@@ -22,7 +22,7 @@ export default {
 
 const Template = () => {
   return (
-    <BuyContainerMock />
+    <BasketContainerMock />
   );
 };
 

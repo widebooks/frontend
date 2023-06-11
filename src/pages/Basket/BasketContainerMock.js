@@ -2,14 +2,14 @@ import {useState} from "react";
 import flatMap from "lodash/flatMap";
 import {PATH_BOOKS_MODEL_FRONT} from "constants";
 
-import Buy from "./Buy";
-import buyMock from "./mock/buyMock";
+import Basket from "./Basket";
+import basketMock from "./mock/BasketMock";
 
-const BuyContainerMock = () => {
-  const [buy, setBuy] = useState(buyMock)
+const BasketContainerMock = () => {
+  const [buy, setBuy] = useState(basketMock)
 
   return (
-    <Buy
+    <Basket
       countProductInBasket={10}
       buy={buy}
       pathToImage={PATH_BOOKS_MODEL_FRONT}
@@ -39,4 +39,4 @@ const BuyContainerMock = () => {
   )
 }
 
-export default BuyContainerMock;
+export default BasketContainerMock;

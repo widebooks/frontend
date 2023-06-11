@@ -7,7 +7,7 @@ import {PATH_BOOKS_MODEL_FRONT} from "constants";
 import mockShoppingList from "./mock/mockShoppingList";
 
 export default {
-  title: "Pages/Buy/ShoppingList",
+  title: "Pages/Basket/ShoppingList",
   component: ShoppingList,
   argTypes: {},
   decorators: [

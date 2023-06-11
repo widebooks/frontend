@@ -3,9 +3,9 @@ import Button from "components/Button";
 import reduceMoney from "helpers/reduceMoney";
 import ShoppingList from "./components/ShoppingList";
 
-import cl from "./Buy.module.scss";
+import cl from "./Basket.module.scss";
 
-const Buy = ({
+const Basket = ({
                countProductInBasket,
                buy,
                pathToImage,
@@ -36,4 +36,4 @@ const Buy = ({
   )
 }
 
-export default Buy;
+export default Basket;

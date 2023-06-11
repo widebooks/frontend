@@ -1,4 +1,4 @@
-const buyMock = {
+const basketMock = {
   listBuy: [
     {
       id: 15,
@@ -60,4 +60,4 @@ const buyMock = {
   commonPrice: 950000
 }
 
-export default buyMock;
+export default basketMock;
