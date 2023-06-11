@@ -1,21 +1,28 @@
-import Buy from "pages/Buy";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import BuyContainerMock from "pages/Buy/BuyContainerMock";
 
 export default {
   title: "Pages/Buy",
-  component: Buy,
+  component: BuyContainerMock,
   argTypes: {},
   decorators: [
     Story => (
-      <div style={{ margin: "20px" }}>
-        <Story />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={(
+            <div>
+              <Story />
+            </div>
+          )} />
+        </Routes>
+      </BrowserRouter>
     ),
   ],
 };
 
 const Template = () => {
   return (
-    <Buy />
+    <BuyContainerMock />
   );
 };
 

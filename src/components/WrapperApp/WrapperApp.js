@@ -1,15 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cn from "classnames";
+
 import Header from "../Header";
 import Footer from "components/Footer";
 import Container from "../Container";
+
 import cl from "./Wrapper.module.scss";
 
 const WrapperApp = ({
                       countProductInBasket,
-                      children
+                      children,
+                      className
 }) => (
-  <div className={cl.wrapper}>
+  <div className={cn(cl.wrapper, className)}>
     <Header className={cl.header} countProductInBasket={countProductInBasket}/>
     <Container className={cl.content}>
       {children}
@@ -21,6 +25,7 @@ const WrapperApp = ({
 WrapperApp.propTypes = {
   countProductInBasket: PropTypes.number,
   children: PropTypes.any,
+  className: PropTypes.string,
 };
 
 WrapperApp.defaultProps = {

@@ -1,13 +1,13 @@
 import {useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import flatMap from "lodash/flatMap";
-import ShoppingList from "components/ShoppingList";
+import ShoppingList from "./ShoppingList";
 import {PATH_BOOKS_MODEL_FRONT} from "constants";
 
 import mockShoppingList from "./mock/mockShoppingList";
 
 export default {
-  title: "UI/ShoppingList",
+  title: "Pages/Buy/ShoppingList",
   component: ShoppingList,
   argTypes: {},
   decorators: [

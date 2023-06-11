@@ -6,12 +6,11 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import Box from "@mui/material/Box";
 import Button from "components/Button";
+import ButtonLink from "components/ButtonLink";
 import reduceMoney from "helpers/reduceMoney"
 
 import {ReactComponent as DeleteSVG} from "./static/delete.svg";
-import "./ShoppingList.scss";
 import cl from "./ShoppingList.module.scss";
-import ButtonLink from "../ButtonLink";
 
 
 const ShoppingList = ({
