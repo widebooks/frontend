@@ -12,6 +12,7 @@ import {ReactComponent as StarSVG} from "./static/start.svg";
 
 const Product = ({
                    book,
+                   countProductInBasket,
                    pathToImage,
 }) => {
 
@@ -20,7 +21,7 @@ const Product = ({
     "Не стандартный жанр"
 
   return (
-    <WrapperApp>
+    <WrapperApp countProductInBasket={countProductInBasket}>
       <div className={cl.content}>
        <div className={cl.content__left}>
          <Carousel

@@ -9,8 +9,6 @@ const Badge = ({
   count,
   type
 }) => {
-  console.log('type', type);
-
   return (
     <BadgeMui badgeContent={count} color="primary">
       {type === "message" && <MailIcon color="action" className={cl.badge__icon}/>}

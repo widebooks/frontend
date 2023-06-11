@@ -8,6 +8,7 @@ const ProductContainerMock = () => {
     <Product
       book={bookMock}
       pathToImage={PATH_BOOKS_MODEL_FRONT}
+      countProductInBasket={10}
     />
   )
 }

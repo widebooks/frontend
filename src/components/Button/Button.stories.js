@@ -1,5 +1,8 @@
 import Button from "components/Button";
 
+import {ReactComponent as BasketSVG} from "./mock/basket.svg";
+import {ReactComponent as BatterySVG} from "./mock/battery.svg";
+
 export default {
   title: "UI/Button",
   component: Button,
@@ -13,7 +16,7 @@ export default {
   ],
 };
 
-const Template = (args) => {
+const Template = args => {
   return (
     <Button
       {...args}
@@ -39,5 +42,21 @@ export const TypeOutline = {
   render: args => <Template variant="outlined" {...args} />,
   args: {
     ...Default.args
+  }
+};
+
+export const WithStartSvg = {
+  render: args => <Template {...args} />,
+  args: {
+    ...Default.args,
+    startIcon: <BatterySVG />,
+  }
+};
+
+export const Disabled = {
+  render: args => <Template {...args} />,
+  args: {
+    ...Default.args,
+    disabled: true,
   }
 };

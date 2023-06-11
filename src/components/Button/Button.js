@@ -6,8 +6,6 @@ import { styled } from '@mui/material/styles';
 import cl from "./Button.module.scss";
 
 const ColorButton = styled(ButtonMui)(({ variant }) => {
-  console.log('variant', variant);
-
   return (
     ({
       color: variant === "contained" ? '#fff' : "#3d5afe",
@@ -32,6 +30,9 @@ const ColorButton = styled(ButtonMui)(({ variant }) => {
 
 const Button = ({
                   variant,
+  disabled,
+                  startIcon,
+                  endIcon,
                   className,
                   children,
                   onClick
@@ -39,17 +40,31 @@ const Button = ({
   return (
     <ColorButton
       variant={variant}
+      disabled={disabled}
       className={cn(cl.button, className)}
       onClick={onClick}
     >
+      {startIcon && (
+        <div className={cl.button__svg}>
+          {startIcon}
+        </div>
+      )}
       {children}
+      {endIcon && (
+        <div className={cl.button__svg}>
+          {endIcon}
+        </div>
+      )}
     </ColorButton>
   )
 }
 
 Button.propTypes = {
   variant: PropTypes.oneOf(["text", "contained", "outlined"]),
+  disabled: PropTypes.bool,
   className: PropTypes.string,
+  startIcon: PropTypes.any,
+  endIcon: PropTypes.any,
   children: PropTypes.any,
   onChange: PropTypes.func,
 };

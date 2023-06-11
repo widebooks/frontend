@@ -1,11 +1,15 @@
-import Header from "components/Header";
+import WrapperApp from "components/WrapperApp";
+import ShoppingList from "components/ShoppingList";
 
-const Buy = () => {
+const Buy = ({
+               countProductInBasket,
+               buy
+             }) => {
 
   return (
-    <div>
-      <Header />
-    </div>
+    <WrapperApp countProductInBasket={countProductInBasket}>
+      <ShoppingList />
+    </WrapperApp>
   )
 }
 

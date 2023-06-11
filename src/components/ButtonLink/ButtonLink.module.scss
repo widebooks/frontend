@@ -1,0 +1,36 @@
+@import "styles/animation";
+@import "styles/colors";
+
+.link {
+  text-decoration: none;
+
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $font-Secondary-light;
+
+  @include animationTransition(color);
+  @include animationTransition(text-decoration);
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__default {
+    color: $font-primary;
+
+    &:hover {
+      color: $font-primary-darker;
+    }
+  }
+
+  &__white {
+    color: $font-Secondary-light;
+
+    &:hover {
+      color: $font-link-light;
+    }
+  }
+}

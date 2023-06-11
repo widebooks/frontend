@@ -6,10 +6,11 @@ import Container from "../Container";
 import cl from "./Wrapper.module.scss";
 
 const WrapperApp = ({
+                      countProductInBasket,
                       children
 }) => (
   <div className={cl.wrapper}>
-    <Header className={cl.header}/>
+    <Header className={cl.header} countProductInBasket={countProductInBasket}/>
     <Container className={cl.content}>
       {children}
     </Container>
@@ -18,6 +19,7 @@ const WrapperApp = ({
 )
 
 WrapperApp.propTypes = {
+  countProductInBasket: PropTypes.number,
   children: PropTypes.any,
 };
 

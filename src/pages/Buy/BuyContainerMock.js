@@ -1,9 +1,14 @@
 import Buy from "./Buy";
 
+import buyMock from "./mock/buyMock";
+
 const BuyContainerMock = () => {
 
   return (
-    <Buy />
+    <Buy
+      buy={buyMock}
+      countProductInBasket={10}
+    />
   )
 }
 

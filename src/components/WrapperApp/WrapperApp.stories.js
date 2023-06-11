@@ -18,9 +18,9 @@ export default {
   ],
 };
 
-const Template = ({countMockElement}) => {
+const Template = ({countMockElement, ...args}) => {
   return (
-    <WrapperApp>
+    <WrapperApp {...args}>
       <div>
         {[...Array(countMockElement).keys()].map((key, i) => {
           return (
@@ -38,6 +38,7 @@ export const Default = {
   render: args => <Template {...args}/>,
   args: {
     countMockElement: 3,
+    countProductInBasket: 5
   }
 };
 
@@ -45,6 +46,7 @@ export const ManyElement = {
   render: args => <Template {...args}/>,
   args: {
     countMockElement: 30,
+    countProductInBasket: 5
   }
 };
 
