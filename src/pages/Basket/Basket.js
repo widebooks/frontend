@@ -6,12 +6,12 @@ import ShoppingList from "./components/ShoppingList";
 import cl from "./Basket.module.scss";
 
 const Basket = ({
-               countProductInBasket,
-               buy,
-               pathToImage,
-               onHandleDelete,
-               onClickMinus,
-               onClickPlus,
+                  countProductInBasket,
+                  buy,
+                  pathToImage,
+                  onHandleDelete,
+                  onClickMinus,
+                  onClickPlus,
 
              }) => {
 
