@@ -3,3 +3,25 @@
 .wrapper {
   background-color: $color-background-lighter;
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $color-White;
+  border-radius: 5px;
+  font-size: 32px;
+
+  &__price {
+    color: $font-primary-darker;
+    font-weight: 700;
+    text-decoration-line: underline;
+  }
+
+  &__button {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}

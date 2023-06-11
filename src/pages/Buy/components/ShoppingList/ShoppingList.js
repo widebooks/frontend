@@ -52,7 +52,7 @@ const ShoppingList = ({
 
                   <p>В наличии: {buy.total}</p>
                   <div className={cl.content__price}>
-                    Цена: {reduceMoney(buy.price)} ₽
+                    Цена: {reduceMoney(buy.price)}
                   </div>
                 </div>
                 <div className={cl.content__deleteWrapper}>
@@ -118,7 +118,7 @@ const ShoppingList = ({
               </div>
               <div className={cl.content__priceWrapper}>
                 <div className={cl.content__fullPrice}>
-                  {reduceMoney(buy.sumPrice)} ₽
+                  {reduceMoney(buy.sumPrice)}
                 </div>
               </div>
             </div>

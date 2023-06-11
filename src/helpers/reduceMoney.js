@@ -1,15 +1,15 @@
 const reduceMoney = money => {
   if (money > 1000000000) {
-    return `${combinePrice(money, 100000000)} млрд`;
+    return `${combinePrice(money, 100000000)} млрд ₽`;
   }
   if (money > 1000000) {
-    return `${combinePrice(money, 1000000)} млн`;
+    return `${combinePrice(money, 1000000)} млн ₽`;
   }
   if (money > 1000) {
-    return `${combinePrice(money, 1000)} тыс`;
+    return `${combinePrice(money, 1000)} тыс ₽`;
   }
   if (money < 1000) {
-    return `${money} `;
+    return `${money} ₽`;
   }
 };
 

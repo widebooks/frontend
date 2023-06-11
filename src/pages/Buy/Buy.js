@@ -1,4 +1,6 @@
 import WrapperApp from "components/WrapperApp";
+import Button from "components/Button";
+import reduceMoney from "helpers/reduceMoney";
 import ShoppingList from "./components/ShoppingList";
 
 import cl from "./Buy.module.scss";
@@ -9,7 +11,8 @@ const Buy = ({
                pathToImage,
                onHandleDelete,
                onClickMinus,
-               onClickPlus
+               onClickPlus,
+
              }) => {
 
   return (
@@ -21,7 +24,14 @@ const Buy = ({
         onClickMinus={onClickMinus}
         onClickPlus={onClickPlus}
       />
-
+      <div className={cl.footer}>
+        <div>
+          Выбранных книг на сумму <span className={cl.footer__price}>{reduceMoney(buy.commonPrice)}</span>
+        </div>
+        <Button className={cl.footer__button} variant="outlined">
+          Перейти к оформлению заказа
+        </Button>
+      </div>
     </WrapperApp>
   )
 }
