@@ -25,6 +25,7 @@ const mockBooks = [
       id: 1,
       type: 3
     },
+    typeProduct: 1,
     rating: 2
   },
   {
@@ -45,8 +46,10 @@ const mockBooks = [
     dateWriting: "1967 г",
     seller: {
       name: "ООО Книжный дом",
-      id: 2
+      id: 2,
+      type: 3
     },
+    typeProduct: 1,
     rating: 1
   },
   {
@@ -68,8 +71,10 @@ const mockBooks = [
     images: ["l114365_1.jpg"],
     seller: {
       name: "ЮЛ Книга.РУ",
-      id: 4
+      id: 4,
+      type: 1
     },
+    typeProduct: 1,
     rating: 8,
     avatar: "123123132.jfif",
   },
@@ -92,8 +97,10 @@ const mockBooks = [
     dateWriting: "1946-1948 гг",
     seller: {
       name: "Ч Копчигин О.Ю.",
-      id: 5
+      id: 5,
+      type: 2
     },
+    typeProduct: 1,
     rating: 4
   },
   {
@@ -114,8 +121,10 @@ const mockBooks = [
     images: ["l114363_1.jpg"],
     seller: {
       name: "Смирнов Б.В.",
-      id: 6
+      id: 6,
+      type: 2
     },
+    typeProduct: 1,
     rating: 6,
     avatar: "Без названия.jfif",
   },
@@ -138,8 +147,10 @@ const mockBooks = [
     dateWriting: "1903 г",
     seller: {
       name: "ООО Книжный двор",
-      id: 7
+      id: 7,
+      type: 3
     },
+    typeProduct: 1,
     rating: 0.5,
     avatar: "thumb_20140128010209216.jpg",
   },
@@ -165,8 +176,10 @@ const mockBooks = [
     dateWriting: "1886 г",
     seller: {
       name: "ЮЛ Книжный",
-      id: 3
+      id: 3,
+      type: 3
     },
+    typeProduct: 1,
     rating: 3.4
   },
   {
@@ -185,8 +198,10 @@ const mockBooks = [
     dateWriting: "1912-1913 гг",
     seller: {
       name: "Ч Копчигин О.Ю.",
-      id: 5
+      id: 5,
+      type: 2
     },
+    typeProduct: 1,
     rating: 8
   },
   {
@@ -222,8 +237,10 @@ const mockBooks = [
     dateWriting: "1936 г",
     seller: {
       name: "ООО Бухгалтерия",
-      id: 1
+      id: 1,
+      type: 3
     },
+    typeProduct: 1,
     rating: 10
   },
   {
@@ -251,8 +268,10 @@ const mockBooks = [
     dateWriting: "1928 г",
     seller: {
       name: "ЮЛ Книга.РУ",
-      id: 4
+      id: 4,
+      type: 1
     },
+    typeProduct: 1,
     rating: 3.4
   },
   {
@@ -278,8 +297,10 @@ const mockBooks = [
     images: ["l114366_1.jpg"],
     seller: {
       name: "Ч Копчигин О.Ю.",
-      id: 5
+      id: 5,
+      type: 2
     },
+    typeProduct: 2,
     rating: 3.4,
     avatar: "j--uNscezS8.jpg",
   },
@@ -309,8 +330,10 @@ const mockBooks = [
     dateWriting: "1945 г",
     seller: {
       name: "Ч Смирнов Б.В.",
-      id: 6
+      id: 6,
+      type: 2
     },
+    typeProduct: 1,
     rating: 2
   },
   {
@@ -333,8 +356,10 @@ const mockBooks = [
     dateWriting: "1934 г",
     seller: {
       name: "ООО Бухгалтерия",
-      id: 1
+      id: 1,
+      type: 3
     },
+    typeProduct: 2,
     rating: 7
   },
   {
@@ -352,8 +377,9 @@ const mockBooks = [
     dateWriting: "По 1911-1913 гг",
     seller: {
       name: "Ч Смирнов Б.В.",
-      id: 6
+      id: 6,
     },
+    typeProduct: 1,
     rating: 1
   },
 
@@ -376,8 +402,10 @@ const mockBooks = [
     dateWriting: "1979 г",
     seller: {
       name: "Ч Смирнов Б.В.",
-      id: 6
+      id: 6,
+      type: 2
     },
+    typeProduct: 2,
     rating: 1
   },
 ]

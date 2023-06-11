@@ -3,7 +3,7 @@ import SearchBar from "components/SearchBar";
 import Tabs from "components/Tabs";
 
 import Genres from "./components/Genres";
-import ListBook from "./components/ListBooks";
+import ListBooks from "./components/ListBooks";
 
 import cl from "./MiniSearch.module.scss";
 
@@ -21,7 +21,7 @@ const MiniSearch = ({
   onSelectTag,
   onSelectGenre,
 }) => {
-
+  console.log('books_in_MiniSearch', books);
   return (
     <div className={cl.search}>
       <SearchBar
@@ -45,7 +45,7 @@ const MiniSearch = ({
         className={cl.search__genres}
         onSelectGenre={onSelectGenre}
       />
-      <ListBook
+      <ListBooks
         books={books}
         pathBook={pathBook}
         pathAvatar={pathAvatar}

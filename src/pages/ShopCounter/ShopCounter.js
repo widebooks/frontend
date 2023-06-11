@@ -1,9 +1,6 @@
 import React from "react";
-import Header from "components/Header";
-import Container from "components/Container";
 import SearchBar from "components/SearchBar";
 import Pagination from "components/Pagination";
-import Footer from "components/Footer";
 import WrapperApp from "components/WrapperApp";
 import Filter from "./components/Filter";
 
@@ -53,7 +50,7 @@ const ShopCounter = ({
                        pathBook,
                        pathAvatar,
 
-  //ПАГИНАЦИЯ
+                       //ПАГИНАЦИЯ
                        countPage,
                        currentPage,
                        onChangePage,
@@ -116,13 +113,6 @@ const ShopCounter = ({
         className={cl.pagination}
       />
     </WrapperApp>
-    // <div>
-    //   <Header/>
-    //   <Container>
-    //
-    //   </Container>
-    //   <Footer />
-    // </div>
   )
 }
 

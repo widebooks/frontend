@@ -49,17 +49,6 @@ const Filter = ({
         values={selectedGenres}
         onSelect={onSelectGenre}
       />
-      <Autocomplete
-        options={authors}
-        inputtedValue={inputtedAuthor}
-        onChange={onChangeAuthor}
-      />
-      <Autocomplete
-        title="Город"
-        options={cities}
-        inputtedValue={inputtedCity}
-        onChange={onChangeCity}
-      />
       <Select
         name="Список топ продавцов"
         options={topSellers.map(v => v.name)}
@@ -72,8 +61,19 @@ const Filter = ({
         values={selectedTypesSeller}
         onSelect={onSelectTypesSeller}
       />
+      <Autocomplete
+        options={authors}
+        inputtedValue={inputtedAuthor}
+        onChange={onChangeAuthor}
+      />
+      <Autocomplete
+        title="Город"
+        options={cities}
+        inputtedValue={inputtedCity}
+        onChange={onChangeCity}
+      />
       <Tabs
-        title="Тип продавца"
+        title="Тип товара"
         tags={typesProduct}
         selectTag={selectedTypeProduct}
         className={cl.filter__tabs}

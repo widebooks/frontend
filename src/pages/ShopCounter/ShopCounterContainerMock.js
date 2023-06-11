@@ -3,8 +3,8 @@ import isSubstringString from "helpers/isSubstringString";
 import {PATH_BOOKS_MODEL_FRONT, PATH_AVATARS_MODEL_FRONT} from "constants";
 
 import ShopCounter from "./ShopCounter";
-import mockGenres from "./mock/mockGenres";
 import mockBooks from "./mock/mockBooks";
+import mockGenres from "./mock/mockGenres";
 import mockTopSellers from "./mock/mockTopSellers";
 import mockTypesSeller from "./mock/mockTypesSeller";
 import mockAuthors from "./mock/mockAuthors";

@@ -1,5 +1,5 @@
-import Card from "widgets/MiniSearch/components/ListBooks";
 import EmptySearch from "components/EmptySearch";
+import Book from "widgets/MiniSearch/components/ListBooks/component/Book";
 
 import cl from "./ListBook.module.scss";
 
@@ -8,6 +8,7 @@ const ListBook = ({
   pathBook,
   pathAvatar
 }) => {
+  console.log('books_in_ListBook', books)
   if (!books.length) {
     return <EmptySearch className={cl.list}/>
   }
@@ -15,7 +16,7 @@ const ListBook = ({
   return (
     <div className={cl.list}>
       {books.map(b => (
-        <Card
+        <Book
           key={b.id}
           book={b}
           pathBook={pathBook}
