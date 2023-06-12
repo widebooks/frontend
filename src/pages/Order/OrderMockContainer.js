@@ -1,11 +1,18 @@
 import Order from "./Order";
 
-const OrderMockContainer = () => {
+import basketMock from "./mock/BasketMock";
 
+const OrderMockContainer = () => {
+  const handleOnOrder = (buy, infoBuyer) => {
+    console.log('buy', buy);
+    console.log('infoBuyer', infoBuyer);
+  }
 
   return (
     <Order
+      buy={basketMock}
       countProductInBasket={10}
+      onOrder={handleOnOrder}
     />
   )
 }

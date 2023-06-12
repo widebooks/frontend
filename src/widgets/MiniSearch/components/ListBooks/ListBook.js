@@ -8,7 +8,6 @@ const ListBook = ({
   pathBook,
   pathAvatar
 }) => {
-  console.log('books_in_ListBook', books)
   if (!books.length) {
     return <EmptySearch className={cl.list}/>
   }

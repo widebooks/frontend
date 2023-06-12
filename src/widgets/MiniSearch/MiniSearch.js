@@ -21,7 +21,6 @@ const MiniSearch = ({
   onSelectTag,
   onSelectGenre,
 }) => {
-  console.log('books_in_MiniSearch', books);
   return (
     <div className={cl.search}>
       <SearchBar

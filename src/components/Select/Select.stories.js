@@ -1,4 +1,7 @@
+import {useState} from "react";
 import Select from "components/Select";
+
+import mockOptions from "./mock/mockOptions";
 
 export default {
   title: "UI/Select",
@@ -13,12 +16,32 @@ export default {
   ],
 };
 
-const Template = () => {
+const Template = args => {
+  const [selected, setSelected] = useState([]);
+
+  const handleSelect = (event) => {
+    const {
+      target: { value },
+    } = event;
+
+    setSelected(value
+      .map(v => mockOptions
+        .find(g => g.title === v))
+      .filter(v => v));
+  }
+
   return (
-    <Select/>
+    <Select
+      {...args}
+      values={selected.map(v => v.title)}
+      onSelect={handleSelect}
+    />
   );
 };
 
 export const Default = {
-  render: () => <Template />,
+  render: args => <Template {...args}/>,
+  args: {
+    options: mockOptions.map(v => v.title)
+  }
 };

@@ -5,7 +5,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select  from '@mui/material/Select';
+import {default as SelectMui}  from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 
 import cl from "./Select.module.scss"
@@ -31,11 +31,19 @@ function getStyles(name, personName, theme) {
   };
 }
 
-const MuiMultipleSelectChip = ({
+const Select = ({
   name,
   options,
   values,
-  onSelect
+  onSelect,
+
+                                 register,
+                  onFocus,
+                  onClose,
+                  defaultValue,
+                  error,
+                  helperText,
+  label
 }) => {
   const theme = useTheme();
 
@@ -43,20 +51,26 @@ const MuiMultipleSelectChip = ({
     <div>
       <FormControl sx={{ width: '100%' }}>
         <InputLabel className={cl.inputLabel}>{name}</InputLabel>
-        <Select
-          multiple
-          value={values}
+        <SelectMui
+          multiple={!defaultValue}
+          value={!defaultValue ? values : undefined}
           input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-          renderValue={(selected) => (
+          renderValue={!defaultValue ? (selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
                 <Chip key={value} label={value} />
               ))}
             </Box>
-          )}
+          ) : undefined}
           MenuProps={MenuProps}
           className={cl.select}
           onChange={onSelect}
+          // TODO: Со старого приложения
+          label={label}
+          {...register()}
+          onFocus={onFocus}
+          onClose={onClose}
+          defaultValue={defaultValue}
         >
           {options.map((name) => (
             <MenuItem
@@ -67,25 +81,29 @@ const MuiMultipleSelectChip = ({
               {name}
             </MenuItem>
           ))}
-        </Select>
+        </SelectMui>
       </FormControl>
     </div>
   );
 }
 
-MuiMultipleSelectChip.propTypes = {
+Select.propTypes = {
   name: PropTypes.string,
   options: PropTypes.array,
   values: PropTypes.array,
   onSelect: PropTypes.func,
+
+  register: PropTypes.func
 };
 
-MuiMultipleSelectChip.defaultProps = {
+Select.defaultProps = {
   name: "Выберите значение",
   options: [],
   values: [],
   onSelect: () => {},
+
+  register: () => {}
 };
 
 
-export default MuiMultipleSelectChip
+export default Select
