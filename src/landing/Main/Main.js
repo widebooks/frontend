@@ -70,7 +70,7 @@ const Main = () => {
       
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container">
-          <Link className="navbar-brand" to="/app">Букич</Link>
+          <Link className="navbar-brand" to="/app">Bookish</Link>
           {/*<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"*/}
           {/*        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">*/}
           {/*  <span className="navbar-toggler-icon"><i className="mdi mdi-menu"> </i></span>*/}
@@ -117,7 +117,7 @@ const Main = () => {
                     <div data-aos="zoom-in-up">
                       <div className="banner-title">
                         <h3 className="font-weight-medium">
-                          Букич - это сервис поиска и продажи поддержанной литературы
+                          Bookish - это сервис поиска и продажи поддержанной литературы
                         </h3>
                       </div>
                       <p className="mt-3">
@@ -569,7 +569,7 @@ const Main = () => {
           <div className="container">
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
-                <Link className="navbar-brand" to="/app" style={{color: '#fff'}}>Букич, © 2023</Link>
+                <Link className="navbar-brand" to="/app" style={{color: '#fff'}}>Bookish, © 2023</Link>
               </div>
             </div>
 
