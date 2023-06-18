@@ -2,8 +2,8 @@ const basketMock = {
   listBuy: [
     {
       id: 15,
-      price: 350000,
-      sumPrice: 350000,
+      price: 3500,
+      sumPrice: 3500,
       count: 1,
       total: 3,
       title: "#1В.Фалилеев.",
@@ -33,8 +33,8 @@ const basketMock = {
     },
     {
       id: 13,
-      price: 350000,
-      sumPrice: 600000,
+      price: 4000,
+      sumPrice: 8000,
       count: 2,
       total: 2,
       title: "#2Nameless Coffin.",
@@ -57,7 +57,7 @@ const basketMock = {
       rating: 1
     },
   ],
-  commonPrice: 950000
+  commonPrice: 11500
 }
 
 export default basketMock;

@@ -24,6 +24,7 @@ const Input = (
     error,
     helperText,
     label,
+    type,
     onInput,
     onFocus,
     readOnly = false,
@@ -37,6 +38,7 @@ const Input = (
         margin="normal"
         hiddenLabel={readOnly}
         label={readOnly ? null : label}
+        type={type}
         {...register()}
         error={error}
         helperText={helperText}

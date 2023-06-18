@@ -30,7 +30,8 @@ const ColorButton = styled(ButtonMui)(({ variant }) => {
 
 const Button = ({
                   variant,
-  disabled,
+                  disabled,
+                  type,
                   startIcon,
                   endIcon,
                   className,
@@ -41,6 +42,7 @@ const Button = ({
     <ColorButton
       variant={variant}
       disabled={disabled}
+      type={type}
       className={cn(cl.button, className)}
       onClick={onClick}
     >
