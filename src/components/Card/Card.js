@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Image from "components/Image";
 import Avatar from "components/Avatar";
+import ButtonLink from "components/ButtonLink";
 import {Rating} from "@mui/material";
 import cn from "classnames";
 
@@ -40,8 +41,8 @@ const Card = ({
             )}
         </div>
         <div className={cl.content__main}>
-          <div className={cl.content__text}>
-            {book.description ? book.description : "К данному товару отсутствует описание"}
+          <div>
+            Город: {book.city ? book.city : "К данному товару отсутствует город"}
           </div>
           <Avatar
             path={pathAvatar}
@@ -49,6 +50,16 @@ const Card = ({
             name={book?.seller.name}
           />
         </div>
+        <div className={cl.content__text}>
+          {book.description ? book.description : "К данному товару отсутствует описание"}
+        </div>
+        {
+          !!book.link && (
+            <ButtonLink>
+              Перейти на источник
+            </ButtonLink>
+          )
+        }
       </div>
     </div>
   )

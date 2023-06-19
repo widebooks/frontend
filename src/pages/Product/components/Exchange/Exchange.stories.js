@@ -1,10 +1,10 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-import Sale from "./SaleContainerMock";
+import Sale from "./ExchangeContainerMock";
 
 export default {
-  title: "Pages/Exchange",
+  title: "Pages/Product/Exchange",
   component: Sale,
   argTypes: {},
   decorators: [

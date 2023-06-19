@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  height: 180px;
+  height: 320px;
   padding: 25px;
 
   &__imageWrapper {
@@ -55,11 +55,12 @@
   }
 
   &__text {
-    height: calc(135px - 68px);
+    height: calc(195px - 68px);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-bottom: 10px;
 
     &_hidden {
       width: calc(100% - 75px);
