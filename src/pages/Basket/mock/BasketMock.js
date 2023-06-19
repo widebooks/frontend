@@ -6,7 +6,7 @@ const basketMock = {
       sumPrice: 3500,
       count: 1,
       total: 3,
-      title: "#1В.Фалилеев.",
+      title: "В.Фалилеев.",
       description: "Это самая дорогая книга!!!Первая монография о выдающемся русском художнике-гравере В.Д.Фалилееве, которая и до настоящего времени является единственной.\n" +
         "Большой формат: 22,3 * 28,3см.; 94, [2] стр.\n" +
         "Книга в мягких трёхцветных художественно оформленных издательских обложках.",
@@ -37,7 +37,7 @@ const basketMock = {
       sumPrice: 8000,
       count: 2,
       total: 2,
-      title: "#2Nameless Coffin.",
+      title: "Nameless Coffin.",
       description: "Раритет Книга в издательской бумажной обложке. На английском языке. Состояние хорошее. 215 стр.\n" +
         "Gwendoline Butler, nе Williams (1922 - 2013) was a British writer of mystery fiction and romance novels since 1956, she used the pseudonym Jennie Melville. Credited for the invention of \"woman police detective\", is well known for her series of inspector John coffin novels as Gwendoline Butler, and a female detective Charmian Daniels as Jennie Melville.",
       author: "Gwendoline Butler (Гвендолин Батлер)",
