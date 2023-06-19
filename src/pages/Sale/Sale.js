@@ -5,10 +5,12 @@ import EmptySearch from "components/EmptySearch";
 import Carousel from "components/Carousel";
 import ButtonIcon from "components/ButtonIcon";
 import reduceMoney from "helpers/reduceMoney"
+import cn from "classnames";
 
 import cl from "./Sale.module.scss";
 import {ReactComponent as BookSVG} from "./static/book.svg";
 import {ReactComponent as EditionSVG} from "./static/edit.svg";
+import {ReactComponent as CheckMarkSVG} from "./static/checkMark.svg";
 
 const Sale = ({
   books,
@@ -34,7 +36,9 @@ const Sale = ({
       {
         !!books.length ?
           books.map(b => (
-            <div className={cl.books}>
+            <div className={cn(cl.books, {
+              [cl.books__withPay]: b.withPay
+            })}>
               <div key={b.id} className={cl.books__left}>
                 <Carousel
                   items={Array.isArray(b?.images) ? b.images.map((v, id) => ({srcImg: v, id})) : undefined}
@@ -50,6 +54,7 @@ const Sale = ({
                   <div>Цена: {b.price ? reduceMoney(b.price) : "Не указано"}</div>
                   <div>Описание: {b.description ? b.description : "Не указано"}</div>
                   <div>Город нахождения товара: {b.city ? b.city : "Не указано"}</div>
+                  <div></div>
                 </div>
               </div>
               <div className={cl.books__right}>
@@ -58,6 +63,19 @@ const Sale = ({
                   icon={<EditionSVG className={cl.books__svg} />}
                 />
               </div>
+
+              {
+                b.withPay && (
+                  <div className={cl.books__statusPay}>
+                    <div>
+                      С оплатой на сервисе
+                    </div>
+                    <div>
+                      {<CheckMarkSVG className={cl.books__svgPay}/>}
+                    </div>
+                  </div>
+                )
+              }
             </div>
           ))
           : (

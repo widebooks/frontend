@@ -28,6 +28,7 @@ const mockBooks = [
     typeProduct: 1,
     rating: 2,
     isOwnProduct: true,
+    withPay: true,
   },
   {
     id: 13,
@@ -79,6 +80,7 @@ const mockBooks = [
     rating: 8,
     avatar: "123123132.jfif",
     isOwnProduct: true,
+    withPay: true,
   },
   {
     id: 9,
@@ -104,7 +106,8 @@ const mockBooks = [
     },
     typeProduct: 1,
     rating: 4,
-    isOwnProduct: true
+    isOwnProduct: true,
+    withPay: true,
   },
   {
     id: 3,

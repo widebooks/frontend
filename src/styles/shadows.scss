@@ -1,7 +1,7 @@
 @import "styles/colors";
 
-@mixin shadowBlockLight () {
-  box-shadow: 0 0 5px 5px $color-background-light;
+@mixin shadowBlockLight ($color: $color-background-light) {
+  box-shadow: 0 0 5px 5px $color;
 }
 
 @mixin shadowBlock () {
