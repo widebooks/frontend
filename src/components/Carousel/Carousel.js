@@ -24,6 +24,8 @@ const Carousel = ({
     ...customSettings
   };
 
+  console.log('items', items)
+
   return (
     <div className={cn(cl.slick__wrapper, className)}>
       {title && <h2>{title}</h2>}
@@ -34,14 +36,20 @@ const Carousel = ({
         dotsClass={cn("slick-dots", cl.slick__dots)}
       >
         {
-          items.map(v => (
+          !!items.length ? items.map(v => (
             <Image
               key={v.id}
               path={pathToImage}
               file={v.srcImg}
               className={cn(cl.slick__img, classNameImage)}
+              type="book"
             />
-          ))
+          )) : (
+            <Image
+              className={cn(cl.slick__img, classNameImage)}
+              type="book"
+            />
+          )
         }
       </Slider>
     </div>

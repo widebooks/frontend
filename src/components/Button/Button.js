@@ -13,6 +13,7 @@ const ColorButton = styled(ButtonMui)(({ variant }) => {
       borderColor:  variant === "outlined" ? '#2a3eb1' : "none",
       '&:hover': {
         backgroundColor: variant === "contained" ? '#3548CF' : "none",
+        color: variant === "contained" ? '#b3e5fc ' : "none",
         borderColor: '#2a3eb1',
         boxShadow: 'none',
       },

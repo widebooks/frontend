@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import Sale from "./SaleContainerMock";
 
@@ -9,7 +10,13 @@ export default {
   decorators: [
     Story => (
       <div style={{ margin: "20px" }}>
-        <Story />
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={(
+              <Story />
+            )} />
+          </Routes>
+        </BrowserRouter>
       </div>
     ),
   ],

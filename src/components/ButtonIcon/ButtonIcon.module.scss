@@ -16,9 +16,15 @@
 
   &:hover:not(&:disabled):not(&:active):not(.button_toggled) {
     background-color: $color-background-light;
+
+    > svg {
+      color: $font-primary;
+    }
   }
 
   svg {
+    @include animationTransition(color);
+
     height: 100%;
     width: 100%;
   }

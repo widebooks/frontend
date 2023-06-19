@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
+import cn from "classnames";
 
 import cl from "./ButtonIcon.module.scss";
 import {ReactComponent as DefaultSVG} from "./static/defaultSvg.svg";
 
 const ButtonIcon = ({
-                      children,
                       icon,
+                      children,
+  className
 
                     }) => {
   return (
-    <button className={cl.button}>
+    <button className={cn(cl.button, className)}>
       {children || icon}
     </button>
   )
