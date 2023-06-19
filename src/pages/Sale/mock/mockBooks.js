@@ -1,13 +1,11 @@
 const mockBooks = [
   {
     id: 15,
-    price: 350000,
-    title: "#1В.Фалилеев.",
-    description: "Это самая дорогая книга!!!Первая монография о выдающемся русском художнике-гравере В.Д.Фалилееве, которая и до настоящего времени является единственной.\n" +
-      "Большой формат: 22,3 * 28,3см.; 94, [2] стр.\n" +
-      "Книга в мягких трёхцветных художественно оформленных издательских обложках.",
-    author: "Н.И.Романов",
-    city: "Москва",
+    price: 5500,
+    title: "Библиография Азии.",
+    description: "указатель книг и статей об Азии на русском языке и однех только книг на иностранных языках, касающихся отношений России к азиатским государствам. 2-я серия. Том 1. СПб, Тип. В. Безобразова и К° 1891г. [2], II, II, 230 с Мягкая издательская обложка., Энциклопедический формат.",
+    author: "Межов В. И.",
+    city: "Санкт-Петербург.",
     genres: [
       {
         id: 3,
@@ -18,7 +16,7 @@ const mockBooks = [
         title: "Учебная, справочная литература"
       },
     ],
-    images: ["114057_preview.jpg"],
+    images: ["16870738446630.jpg", "16870738449087.jpg"],
     dateWriting: "1923 г",
     seller: {
       name: "ООО Бухгалтерия",
@@ -32,19 +30,22 @@ const mockBooks = [
   },
   {
     id: 13,
-    price: 350000,
-    title: "#2Nameless Coffin.",
-    description: "Раритет Книга в издательской бумажной обложке. На английском языке. Состояние хорошее. 215 стр.\n" +
-      "Gwendoline Butler, nе Williams (1922 - 2013) was a British writer of mystery fiction and romance novels since 1956, she used the pseudonym Jennie Melville. Credited for the invention of \"woman police detective\", is well known for her series of inspector John coffin novels as Gwendoline Butler, and a female detective Charmian Daniels as Jennie Melville.",
-    author: "Gwendoline Butler (Гвендолин Батлер)",
-    city: "Москва",
+    price: 20000,
+    title: "Русская промышленность в 1922 году.",
+    description: "Материалы к 10-му съезду Советов). Петроград Редакционно-Издательский Отдел 1922г. CIX, 444 с. современный полукожаный переплет, увеличенный формат.",
+    // author: "Gwendoline Butler (Гвендолин Батлер)",
+    city: "Ближнее Подмосковье.",
     genres: [
       {
-        id: 1,
-        title: "Детектив"
-      }
+        id: 2,
+        title: "История"
+      },
+      {
+        id: 5,
+        title: "Антиквариат"
+      },
     ],
-    images: ["l113994_1.jpg", "l113994_3.jpg"],
+    images: ["IMG_7861.JPG", "IMG_7862.JPG", "IMG_7863.JPG", "IMG_7864.JPG"],
     dateWriting: "1967 г",
     seller: {
       name: "ООО Книжный дом",

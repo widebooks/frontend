@@ -14,7 +14,7 @@ const Header = ({className, countProductInBasket}) => {
         <Logo className={cl.header__img} />
         <div className={cl.header__links}>
           <HeaderLink path="/shop-counter">Книги</HeaderLink>
-          <HeaderLink path="/buy">Покупка <Badge count={countProductInBasket}/></HeaderLink>
+          <HeaderLink path="/buy" disabled>Покупка<Badge count={0}/></HeaderLink>
           <HeaderLink path="/sale">Продажа</HeaderLink>
           <HeaderLink path="/personal-account">Личный кабинет</HeaderLink>
         </div>

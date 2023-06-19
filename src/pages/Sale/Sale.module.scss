@@ -19,6 +19,28 @@
   }
 }
 
+.infoPay {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__block {
+    width: 150px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .empty {
   height: 300px;
 }

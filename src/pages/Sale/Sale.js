@@ -33,9 +33,29 @@ const Sale = ({
           Добавить книгу на продажу
         </Button>
       </div>
+      <div className={cl.infoPay}>
+        <div>
+          <div className={cn(cl.books, cl.infoPay__block)}>...</div>
+          <div>- оплата вне сервиса</div>
+        </div>
+        <div>
+          <div className={cn(cl.books, cl.books__withPay, cl.infoPay__block)}>
+            ...
+            <div className={cl.books__statusPay}>
+              <div>
+                {<CheckMarkSVG className={cl.books__svgPay}/>}
+              </div>
+              <div>
+                С оплатой на сервисе
+              </div>
+            </div>
+          </div>
+          <div>- оплата на сервисе</div>
+        </div>
+      </div>
       {
         !!books.length ?
-          books.map(b => (
+          books.slice(0,2).map(b => (
             <div className={cn(cl.books, {
               [cl.books__withPay]: b.withPay
             })}>
